@@ -1,3 +1,6 @@
 [submodule "helper/ticat.helper.bash"]
 	path = helper/ticat.helper.bash
 	url = http://github.com/innerr/ticat.helper.bash
+[submodule "repos/loadgen"]
+	path = repos/loadgen
+	url = https://github.com/crazycs520/loadgen.git

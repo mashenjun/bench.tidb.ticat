@@ -46,6 +46,6 @@ tables=(lineitem orders partsupp part customer supplier nation part region)
 for table in ${tables[@]}; do
 	query="analyze table ${db}.${table}"
 	echo "[:-] ${query} begin"
-	mysql -h "${host}" -P "${port}" -u "${user}" "${db}" -e "${query}"
+	mysql -h "${host}" -P "${port}" -u "${user}" -D "${db}" -e "${query}"
 	echo "[:)] ${query} done"
 done

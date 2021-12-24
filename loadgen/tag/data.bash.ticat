@@ -1,0 +1,7 @@
+help = generate tag by data scale
+
+[env]
+bench.loadgen.payload = read
+bench.loadgen.table-size|size = read
+
+workload.tag.data = write

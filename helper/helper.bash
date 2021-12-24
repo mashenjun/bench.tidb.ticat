@@ -366,3 +366,29 @@ function check_or_install_ycsb()
 		wget -c "${addr}" -O - | tar -xz -C "${prefix}"
 	fi
 }
+
+function build_bin()
+{
+	local dir="${1}"
+	local bin_path="${2}"
+	local make_cmd="${3}"
+	(
+		cd "${dir}"
+		if [ -f "${bin_path}" ]; then
+			echo "[:)] found pre-built '${bin_path}' in build dir: '${dir}'" >&2
+			return
+		fi
+		${make_cmd} 1>&2
+		if [ ! -f "${bin_path}" ]; then
+			echo "[:(] can't build '${bin_path}' from build dir: '${dir}'" >&2
+			exit 1
+		fi
+	)
+	echo "${dir}/${bin_path}"
+}
+
+function build_loadgen() 
+{
+	local dir="${1}"
+	build_bin "${dir}" 'bin/loadgen' 'make build'
+}

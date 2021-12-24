@@ -1,0 +1,4 @@
+help = build loadgen
+
+[dep]
+go = to build loadgen binary

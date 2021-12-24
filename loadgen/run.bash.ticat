@@ -1,0 +1,46 @@
+help = run loadgen benchmark
+
+[arg]
+threads|thread|thrd|thd|t|T = 5
+table-size|size = 100000
+payload = ''
+duration|secs|dur|sec = 60
+aggreation = true
+table-back|back = false
+
+host|h|H = 127.0.0.1
+port|p|P = 4000
+user|u|U = root
+
+[arg2env]
+bench.loadgen.threads = threads
+bench.loadgen.table-size = table-size
+bench.loadgen.payload = payload
+bench.loadgen.duration = duration
+bench.loadgen.aggreation = aggreation
+bench.loadgen.back = table-back 
+
+mysql.host = host
+mysql.port = port
+mysql.user = user
+
+[env]
+bench.loadgen.threads = read
+bench.loadgen.table-size = read
+bench.loadgen.payload = read
+bench.loadgen.duration = read
+
+mysql.host = read
+mysql.port = read
+mysql.user = read
+
+bench.workload = write
+bench.run.begin = read : write
+bench.run.end = write
+bench.run.log = write
+bench.run.score = write
+bench.loadgen.detail = write
+
+[val2env]
+bench.workload = loadgen
+

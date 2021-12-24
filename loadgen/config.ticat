@@ -1,0 +1,21 @@
+help = config loadgen workload
+abbr = conf
+
+[arg]
+threads|thread|thrd|thd|t|T = 5
+table-size|size = 100000
+payload = ''
+duration|secs|dur|sec = 60
+aggreation = true
+table-back|back = false
+
+[arg2env]
+bench.loadgen.threads = threads
+bench.loadgen.table-size = table-size
+bench.loadgen.payload = payload
+bench.loadgen.duration = duration
+bench.loadgen.aggreation = aggreation
+bench.loadgen.back = table-back 
+
+[val2env]
+bench.workload = loadgen

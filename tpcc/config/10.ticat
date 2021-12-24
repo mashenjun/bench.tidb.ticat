@@ -9,7 +9,7 @@ duration|dur = 10m
 [arg2env]
 bench.tpcc.load.threads = load-threads
 bench.tpcc.threads = threads
-bench.tpcc.warehouses = warehouse
+bench.tpcc.warehouses = warehouses
 bench.tpcc.duration = duration
 
 [val2env]

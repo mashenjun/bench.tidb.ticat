@@ -1,0 +1,21 @@
+help = config loadgne workload: use point-get-for-update
+abbr = pgfu
+
+[arg]
+threads|thread|t|T = 5
+table-size|size = 100000
+duration|secs|dur|sec = 60
+aggreation = true
+table-back|back = false
+
+[arg2env]
+bench.loadgen.threads = threads
+bench.loadgen.table-size = table-size
+bench.loadgen.duration = duration
+bench.loadgen.aggreation = aggreation
+bench.loadgen.back = table-back 
+
+[val2env]
+bench.workload = loadgen
+bench.loadgen.payload = point-get-for-update
+

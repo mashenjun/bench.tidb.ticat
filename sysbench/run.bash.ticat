@@ -1,4 +1,4 @@
-help = run TPCC benchmark
+help = run SysBench benchmark
 
 [arg]
 tables|table|tb = ''

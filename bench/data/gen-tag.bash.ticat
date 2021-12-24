@@ -14,6 +14,5 @@ bench.workload = read
 tidb.version.nightly-major = read
 
 tidb.data.tag-from-keys = read
-**[[*tidb.data.tag-from-keys*]]** = read
 
 tidb.data.tag = write
